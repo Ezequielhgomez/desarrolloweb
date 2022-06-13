@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+.ContainerPrincipal{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5vh 85vh 10vh;
+    grid-template-areas: 'nav ''main'' footer';
+}
+
+.etiquetaA {
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    background-color: rgb(30, 2, 75);
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    border: 1px solid rgb(233, 222, 222);
+    background-image: url(../img/AZULT.jpg);
+
+}
+.ulLista{
+    display: flex;
+    flex-wrap: wrap;
+}
+.elementosLista{
+    align-items: center;
+    list-style: none;
+    margin: 15px;
+    background-color: rgb(228, 228, 230);
+    border-radius: 30px;
+    padding: 10px;
+}
+main{
+    grid-area: main;
+    background-color: rgb(129, 124, 124);
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    background-image: url(../img/azul3.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    min-height: 100vh;
+    background: url(../img/arcoiris.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'roboto',  sans-serif;
+    
+}
+
+
+
+
+
+
+
+
+
+/* index */
+
+.grilla {
+    display: grid;
+    grid-template-areas: 
+    "logo logo quiensoy servicios"
+    "logo logo productos contacto";
+    width: 100%;
+    height: 90vh;
+    overflow:hidden;
+}
+
+@media screen and (max-width:1100px)  {
+ .grilla {
+        grid-template-areas:
+        "logo"
+        "quiensoy"
+        "servicios"
+        "productos"
+        "contacto" ;
+       grid-template-rows: 1.5fr repeat(4, 1fr);
+    }
+    
+
+
+
+}
+
+.logo {
+    grid-area: logo;
+     display: flex;
+    background-color: rgb(36, 36, 36);
+    background-image: url(../img/azulazul.jpg);
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+ 
+    
+}
+
+.quiensoy{
+    display: flex;
+    grid-area: quien soy;
+    background-color: rgb(24, 190, 74);
+    background-image: url(../img/azul3.jpg);
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  
+}
+
+.servicios {
+    display: flex;
+
+    grid-area: servicios;
+    background-color: rgb(238, 238, 241);
+    background-image: url(../img/azul2.jpg);;
+    justify-content: center;
+    align-items: center;
+   flex: 1;
+
+
+}
+
+.productos {
+    display: flex;
+grid-area: productos;
+background-color: rgb(165, 165, 179);
+background-image: url(../img/azul4.jpg);
+justify-content: center;
+align-items: center;
+flex: 1;
+
+
+}
+
+.contacto {
+display: flex;
+    grid-area: contacto;
+    background-color: rgb(255, 17, 0);
+    background-image:   url(../img/azulazul.jpg);
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+}
+
+/* ................skills....................... */
+.home {
+    display: flex;
+}
+
+.in-flex {
+    flex: 1;
+    min-width: 300px;
+}
+
+.in-flex1{
+    flex: 2;
+    padding: 25px;
+    background-color: rgb(241, 226, 226);
+    margin: 20px;
+    background-image: url(../img/computacionn.jpg);
+    background-repeat: no-repeat;
+    text-decoration: aqua;
+}
+
+
+/* ..................proyectos.............................. */
+.proyecto {
+    display: grid;
+    grid-template-areas: 
+    "eze eze eze1 eze2"
+    "eze eze eze3 eze4";
+    width: 100%;
+    height: 90vh;
+    overflow:hidden;
+}
+
+@media screen and (max-width:1100px)  {
+ .proyecto {
+        grid-template-areas:
+        "eze"
+        "eze1"
+        "eze2"
+        "eze3"
+        "eze4" ;
+       grid-template-rows: repeat(4, 1fr);
+    }
+    
+
+
+
+}
+
+.eze {
+    grid-area: eze;
+     display: flex;
+    background-color: rgb(36, 36, 36);
+    background-image: url(../img/gym1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+ 
+    
+}
+
+.eze1{
+    display: flex;
+    grid-area: eze1;
+    background-size: cover;
+    background-color: rgb(24, 190, 74);
+    background-image: url(../img/meditacion.jpg);
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  
+}
+
+.eze2 {
+    display: flex;
+
+    grid-area: eze2;
+    background-color: rgb(238, 238, 241);
+    background-image: url(../img/manzana.jpg);
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+   flex: 1;
+
+
+}
+
+.eze3 {
+    display: flex;
+grid-area: eze3;
+background-color: rgb(165, 165, 179);
+background-image: url(../img/computacionn.jpg);
+background-repeat: no-repeat;
+justify-content: center;
+align-items: center;
+flex: 1;
+
+
+}
+
+.eze4 {
+display: flex;
+    grid-area: eze4;
+    background-color: rgb(255, 17, 0);
+    background-image:   url(../img/viaje.jpg);
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+}
+/* ...............contacto..................... */
+
+.formulario {
+    background-color: red;
+width: 100%;
+height: 100vh;
+}
