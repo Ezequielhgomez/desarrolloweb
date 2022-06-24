@@ -5,17 +5,10 @@
     font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+@import "./footer";
 
 
 
-
-.bajo{
-    background-image: url(../img/azul3.jpg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 body {
     min-height: 100vh;
