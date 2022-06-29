@@ -6,6 +6,13 @@
   font-family: century "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  background: url(../img/arcoiris.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: "roboto", sans-serif;
+}
+
 .bajo {
   background-image: url(../img/fondoabout.jpg);
   display: flex;
@@ -14,14 +21,92 @@
   align-items: center;
 }
 
-body {
-  min-height: 100vh;
-  background: url(../img/arcoiris.jpg) no-repeat center center fixed;
-  background-size: cover;
-  font-family: "roboto", sans-serif;
+/* ................aboutmeeee........................ */
+.carousel-inner {
+  margin: auto;
+  width: 20%;
+  max-width: 800px;
+  padding: 2.5em 2em;
+  text-align: center;
 }
 
-/* index */
+/* ...............contacto..................... */
+.formulario {
+  background-color: rgb(58, 13, 95);
+  opacity: 0.8;
+  background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  display: flex;
+  min-height: 100vh;
+}
+.formulario .form {
+  background-color: rgb(189, 192, 192);
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 4.5em 3em;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.formulario .form .form_title {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.form_paragraph {
+  font-weight: 300;
+}
+.form_paragraph .form_link {
+  font-weight: 400;
+  color: rgb(48, 53, 53);
+}
+
+.form_container {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+.form_container .form_group {
+  position: relative;
+  color: aquamarine;
+}
+.form_container .form_group .form_input {
+  width: 100%;
+  background: none;
+  color: rgb(82, 80, 83);
+  font-size: 1rem;
+  padding: 0.6em 0.3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid cornflowerblue;
+}
+.form_container .form_group .form_input .form_input:focus + .form_label {
+  transform: translateY(-12px) scale(0.7);
+}
+
+.form_label {
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translatey(10px);
+}
+
+.form_line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(23, 24, 23);
+  transform: scale(0);
+  transform: left bottom;
+  transition: transform 0.4s;
+}
+
 #info {
   position: absolute;
   left: 5%;
@@ -33,8 +118,7 @@ body {
   font-family: "Lato";
   text-align: center;
 }
-
-.section {
+body .section {
   padding-top: 40px;
   font-size: 1em;
   text-align: center;
@@ -43,13 +127,11 @@ body {
   color: #555;
   background-image: url(../img/amanecer.jpg);
 }
-
-.night .section {
+body .section .night .section {
   background: #080d17;
   color: #e9e5d5;
 }
-
-.night #intro-text {
+body .section .night .section .night #intro-text {
   color: #e9e5d5;
 }
 
@@ -69,8 +151,7 @@ body {
   -webkit-transition: all 1.1s ease-in-out;
   transition: all 1.1s ease-in-out;
 }
-
-.night .time-circle {
+.time-circle .night .time-circle {
   background: linear-gradient(to bottom, #c4b920, #c5a92c);
   border-color: #e9e5d5;
 }
@@ -90,7 +171,6 @@ body {
   -webkit-transition: all 1.1s 0.4s ease;
   transition: all 1.1s 0.4s ease;
 }
-
 @keyframes pulse {
   0% {
     box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
@@ -102,6 +182,7 @@ body {
     box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
   }
 }
+
 @-webkit-keyframes pulse {
   0% {
     box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
@@ -119,8 +200,7 @@ body {
   -webkit-transition: all 1.1s 0s ease;
   transition: all 1.1s 0s ease;
 }
-
-.moon {
+.night .sun .moon {
   position: absolute;
   margin-top: 20px;
   background: #d9d8d0;
@@ -136,50 +216,35 @@ body {
   -webkit-transition: all 1.1s 0s ease;
   transition: all 1.1s 0s ease;
 }
-
-.night .moon {
+.night .sun .moon .night .moon {
   left: 65%;
   top: -10%;
   -webkit-transition: all 1.1s 0.4s ease;
   transition: all 1.1s 0.4s ease;
 }
-
-.moon div:nth-child(n) {
+.night .sun .moon .night .moon .moon div:nth-child(n) {
   position: relative;
   background: #b9b8b0;
   border-radius: 50%;
   box-shadow: inset 4px -2px 0 0px #535457;
 }
-
-.moon div:nth-child(1) {
+.night .sun .moon .night .moon .moon div:nth-child(n) .moon div:nth-child(1) {
   top: 25%;
   left: 12%;
   width: 27%;
   height: 27%;
 }
-
-.moon div:nth-child(2) {
+.night .sun .moon .night .moon .moon div:nth-child(n) .moon div:nth-child(1) .moon div:nth-child(2) {
   top: -11%;
   left: 60%;
   width: 16%;
   height: 16%;
 }
-
-.moon div:nth-child(3) {
+.night .sun .moon .night .moon .moon div:nth-child(n) .moon div:nth-child(1) .moon div:nth-child(2) .moon div:nth-child(3) {
   top: 25%;
   left: 44%;
   width: 16%;
   height: 16%;
-}
-
-.stars {
-  opacity: 0;
-  margin-left: 100px;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.8s 0s ease;
-  transition: all 0.8s 0s ease;
-  z-index: 1000;
 }
 
 .night .stars {
@@ -187,8 +252,7 @@ body {
   -webkit-transition: all 3s 0.4s ease;
   transition: all 3s 0.4s ease;
 }
-
-.stars div:nth-child(n) {
+.night .stars .stars div:nth-child(n) {
   position: absolute;
   background: radial-gradient(rgb(90, 25, 25), rgba(255, 255, 255, 0));
   border-radius: 50%;
@@ -239,24 +303,8 @@ body {
   text-align: center;
 }
 
-/* ................skills....................... */
-.home {
-  display: flex;
-}
-
-.in-flex {
-  flex: 1;
-  min-width: 300px;
-}
-
-.in-flex1 {
-  flex: 2;
-  padding: 25px;
-  background-color: rgb(241, 226, 226);
-  margin: 20px;
-  background-image: url(../img/computacionn.jpg);
-  background-repeat: no-repeat;
-  text-decoration: aqua;
+.linkedin:hover {
+  color: rgba(83, 6, 64, 0.5333333333);
 }
 
 /* ..................proyectos.............................. */
@@ -267,18 +315,20 @@ body {
   height: 90vh;
   overflow: hidden;
 }
-
 @media screen and (max-width: 1100px) {
-  .proyecto {
+  .proyecto .proyecto {
     grid-template-areas: "eze" "eze1" "eze2" "eze3" "eze4";
     grid-template-rows: repeat(4, 1fr);
   }
 }
+
 .eze {
   grid-area: eze;
   display: flex;
-  background-color: rgb(36, 36, 36);
-  background-image: url(../img/gym1.jpg);
+  text-transform: capitalize;
+  color: antiquewhite;
+  background-color: rgba(238, 231, 231, 0.24);
+  background-image: url(../img/com.jpj.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
@@ -291,136 +341,58 @@ body {
   grid-area: eze1;
   background-size: cover;
   background-color: rgb(24, 190, 74);
-  background-image: url(../img/meditacion.jpg);
+  background-image: url(../img/wew.jpg);
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   flex: 1;
+  text-align: center;
 }
 
 .eze2 {
   display: flex;
   grid-area: eze2;
   background-color: rgb(238, 238, 241);
-  background-image: url(../img/manzana.jpg);
+  background-image: url(../img/gris1.jpg);
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   flex: 1;
+  text-align: center;
 }
 
 .eze3 {
   display: flex;
   grid-area: eze3;
-  background-color: rgb(165, 165, 179);
-  background-image: url(../img/computacionn.jpg);
+  background-color: rgb(39, 39, 185);
+  background-image: url(../img/gris1.jpg);
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  text-align: center;
+  color: rgb(43, 0, 122);
 }
 
 .eze4 {
   display: flex;
   grid-area: eze4;
   background-color: rgb(255, 17, 0);
-  background-image: url(../img/viaje.jpg);
+  background-image: url(../img/gris.jpg);
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   flex: 1;
-}
-
-/* ...............contacto..................... */
-.formulario {
-  background-color: rgb(58, 13, 95);
-  opacity: 0.8;
-  background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
-  display: flex;
-  min-height: 100vh;
-}
-
-.form {
-  background-color: rgb(189, 192, 192);
-  margin: auto;
-  width: 90%;
-  max-width: 400px;
-  padding: 4.5em 3em;
-  border-radius: 10px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
-.form_title {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
+.proyecto_hijo {
+  border-radius: 100px;
 }
 
-.form_paragraph {
-  font-weight: 300;
-}
-
-.form_link {
-  font-weight: 400;
-  color: rgb(48, 53, 53);
-}
-
-.form_container {
-  margin-top: 3em;
-  display: grid;
-  gap: 2.5em;
-}
-
-.form_group {
-  position: relative;
-  color: aquamarine;
-}
-
-.form_input {
-  width: 100%;
-  background: none;
-  color: rgb(82, 80, 83);
-  font-size: 1rem;
-  padding: 0.6em 0.3em;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid cornflowerblue;
-}
-
-.form_input:focus + .form_label {
-  transform: translateY(-12px) scale(0.7);
-}
-
-.form_label {
-  color: black;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 5px;
-  transform: translatey(10px);
-}
-
-.form_line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: rgb(23, 24, 23);
-  transform: scale(0);
-  transform: left bottom;
-  transition: transform 0.4s;
-}
-
-/* ................aboutmeeee........................ */
-.carousel-inner {
-  margin: auto;
-  width: 20%;
-  max-width: 700px;
-  padding: 2.5em 3em;
-  text-align: center;
+.tarjetas {
+  background-color: aquamarine;
+  max-height: 900px;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
