@@ -1,89 +1,158 @@
 /* ...............contacto..................... */
+@import"./variables";
 
 .formulario {
-    background-color: rgb(58, 13, 95);
+    background-color: $backgroundPrimary;
 
 opacity: 0.8;
-background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+background: radial-gradient(circle, transparent 20%, $blanco 20%, $blanco 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
 background-size: 20px 20px;
 background-position: 0 0,10px 10px;
 display:flex;
 min-height: 100vh;
 .form{
-    background-color: rgb(189, 192, 192);
+    background-color:$backgroundPrimary;
     margin: auto;
     width: 90%;
     max-width: 400px;
     padding: 4.5em 3em;
     border-radius: 10px;
-    box-shadow: 0 5px 10px - 5px rgb(0 0 0 / 30%);
+    box-shadow: 0 5px 10px - 5px $black (137, 185, 4, 0.3);
     text-align: center;
 .form_title {
         font-size: 2rem;
         margin-bottom: .5em;
+        color: $blanco;
   }
  }
 }
 
 
+
 .form_paragraph {
     font-weight: 300;
-.form_link{
-    font-weight: 400;
-    color: rgb(48, 53, 53);
+    color: $blanco;
+    .form_link{
+        font-weight: 400;
+        color: $blanco;
+        .form_container {
+            margin-top: 3em;
+            display: grid;
+            gap: 2.5em;
+        }
+    }
+    
+}
+
+
+
+
+.form_group{
+    position: relative;
+    color: $blanco;
+    .form_input{
+        width: 100%;
+        background: none;
+        color: $blanco;
+        font-size: 1rem;
+        padding: .6em .3em;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgb(228, 237, 100);
+        
+
+.form_input:focus + .form_label{
+    transform: translateY(-12px) scale(.7);
+}
     
     }
 }
 
-.form_container {
-    margin-top: 3em;
-    display: grid;
-    gap: 2.5em;
-    .form_group{
-        position: relative;
-        color: aquamarine;
-        .form_input{
-            width: 100%;
-            background: none;
-            color: rgb(82, 80, 83);
-            font-size: 1rem;
-            padding: .6em .3em;
-            border: none;
-            outline: none;
-            border-bottom: 1px solid cornflowerblue;
-            .form_input:focus + .form_label{
-                transform: translateY(-12px) scale(.7);
-            }
-        
-        }
-        
-    }
-}
-
-
 
 
 .form_label {
-    color: black;
+    color: $blanco;
     cursor: pointer;
     position: absolute;
     top: 0;
     left: 5px;
     transform: translatey(10px);
+    .form_line{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color:$blanco;
+        transform: scale(0);
+        transform: left bottom;
+        transition: transform .4s;
+    }
+    
 }
 
-.form_line{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: rgb(23, 24, 23);
-    transform: scale(0);
-    transform: left bottom;
-    transition: transform .4s;
+.cajitafacebook {
+    background-color: map-get($facebook, background-color);
+    color: map-get($facebook,color);
+    border-radius: map-get($facebook, border-radius);
+    border: map-get($facebook, border);
+  
 }
 
+.cajitainstagram {
+    background-color: map-get($instagram, background-color);
+    color: map-get($instagram,color);
+    border-radius: map-get($instagram, border-radius);
+    border: map-get($instagram, border);
+  
+}
+
+.cajitamail {
+    background-color: map-get($mail, background-color);
+    color: map-get($mail,color);
+    border-radius: map-get($mail, border-radius);
+    border: map-get($mail, border);
+  
+}
+
+.cajitatwitter {
+    background-color: map-get($twitter, background-color);
+    color: map-get($twitter,color);
+    border-radius: map-get($twitter, border-radius);
+    border: map-get($twitter, border);
+  
+}
+
+
+.logo1 {
+    background-image: url(../img/rojo.jpg);
+    border-radius: 80%;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200%;
+    color: #e5e5f7
+}
+
+.logo2{
+    @extend .logo1;
+}
+
+.logo, .logo2{
+    @include anchos(100px, 150px);
+}
+
+
+
+
+
+
+
+
+   
 
 
 

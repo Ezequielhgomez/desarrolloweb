@@ -1,4 +1,5 @@
 
+@import"./variables";
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 #info {
@@ -13,7 +14,7 @@ body {
   font-family: 'Lato';
   text-align: center;
   .section {
-    padding-top: 40px;
+    padding-top:$tamanos;
     font-size: 1em;
     text-align: center;
     width: 100%;

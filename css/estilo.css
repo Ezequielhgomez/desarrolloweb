@@ -32,79 +32,126 @@ body {
 
 /* ...............contacto..................... */
 .formulario {
-  background-color: rgb(58, 13, 95);
+  background-color: rgb(14, 14, 104);
   opacity: 0.8;
-  background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+  background: radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
   display: flex;
   min-height: 100vh;
 }
 .formulario .form {
-  background-color: rgb(189, 192, 192);
+  background-color: rgb(14, 14, 104);
   margin: auto;
   width: 90%;
   max-width: 400px;
   padding: 4.5em 3em;
   border-radius: 10px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 5px rgb(0, 0, 0) 137, 185, 4, 0.3;
   text-align: center;
 }
 .formulario .form .form_title {
   font-size: 2rem;
   margin-bottom: 0.5em;
+  color: rgb(255, 255, 255);
 }
 
 .form_paragraph {
   font-weight: 300;
+  color: rgb(255, 255, 255);
 }
 .form_paragraph .form_link {
   font-weight: 400;
-  color: rgb(48, 53, 53);
+  color: rgb(255, 255, 255);
 }
-
-.form_container {
+.form_paragraph .form_link .form_container {
   margin-top: 3em;
   display: grid;
   gap: 2.5em;
 }
-.form_container .form_group {
+
+.form_group {
   position: relative;
-  color: aquamarine;
+  color: rgb(255, 255, 255);
 }
-.form_container .form_group .form_input {
+.form_group .form_input {
   width: 100%;
   background: none;
-  color: rgb(82, 80, 83);
+  color: rgb(255, 255, 255);
   font-size: 1rem;
   padding: 0.6em 0.3em;
   border: none;
   outline: none;
-  border-bottom: 1px solid cornflowerblue;
+  border-bottom: 1px solid rgb(228, 237, 100);
 }
-.form_container .form_group .form_input .form_input:focus + .form_label {
+.form_group .form_input .form_input:focus + .form_label {
   transform: translateY(-12px) scale(0.7);
 }
 
 .form_label {
-  color: black;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   position: absolute;
   top: 0;
   left: 5px;
   transform: translatey(10px);
 }
-
-.form_line {
+.form_label .form_line {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: rgb(23, 24, 23);
+  background-color: rgb(255, 255, 255);
   transform: scale(0);
   transform: left bottom;
   transition: transform 0.4s;
+}
+
+.cajitafacebook {
+  background-color: blue;
+  color: rgb(121, 121, 121);
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.cajitainstagram {
+  background-color: rgb(153, 0, 102);
+  color: rgb(121, 121, 121);
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.cajitamail {
+  background-color: rgb(255, 0, 0);
+  color: rgb(121, 121, 121);
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.cajitatwitter {
+  background-color: rgb(20, 232, 240);
+  color: rgb(121, 121, 121);
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.logo1, .logo2 {
+  background-image: url(../img/rojo.jpg);
+  border-radius: 80%;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200%;
+  color: #e5e5f7;
+}
+
+.logo, .logo2 {
+  width: 100px;
+  height: 150px;
 }
 
 #info {
@@ -119,7 +166,7 @@ body {
   text-align: center;
 }
 body .section {
-  padding-top: 40px;
+  padding-top: 50px, 100px;
   font-size: 1em;
   text-align: center;
   width: 100%;
@@ -326,7 +373,7 @@ body .section .night .section .night #intro-text {
   grid-area: eze;
   display: flex;
   text-transform: capitalize;
-  color: antiquewhite;
+  color: rgb(14, 14, 104);
   background-color: rgba(238, 231, 231, 0.24);
   background-image: url(../img/com.jpj.jpg);
   background-repeat: no-repeat;

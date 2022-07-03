@@ -1,4 +1,4 @@
-
+@import"./variables";
 /* ..................proyectos.............................. */
 .proyecto {
     display: grid;
@@ -25,7 +25,8 @@
 .eze {
     grid-area: eze;
      display: flex;
-     text-transform: capitalize;color: antiquewhite;
+     text-transform: capitalize;
+     color: $backgroundPrimary;
     background-color: rgba(238, 231, 231, 0.24);
     background-image: url(../img/com.jpj.jpg);
     background-repeat: no-repeat;
