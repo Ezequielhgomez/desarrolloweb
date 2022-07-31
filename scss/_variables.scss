@@ -1,6 +1,10 @@
 
 $backgroundPrimary: rgb(14, 14, 104);
 $paddingfooter:10px;
+$fondo-transparente: rgba(0, 0, 0, .5);
+$tamaño-fuente: 18px;
+$estilo-fuente: 'Rubik', sans-serif;
+$color-nombre: #5C62EC;
 $blanco: rgb(255, 255, 255);
 $gray:rgb(121, 121, 121);
 $black: rgb(0, 0, 0);
@@ -47,4 +51,10 @@ background-color:rgb(153, 0, 102),
     height: $alto;
     
     
+}
+
+@mixin crearBordes {
+    border-radius: 12px;
+    background-color: $fondo-transparente;
+    box-shadow: 0px 0px 5px white;
 }

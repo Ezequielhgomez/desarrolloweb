@@ -13,145 +13,143 @@ body {
   font-family: "roboto", sans-serif;
 }
 
-.bajo {
-  background-image: url(../img/fondoabout.jpg);
+.contenedorTransparente {
+  background: linear-gradient(-45deg, #EE7752, #E73c7e, #23A6D5, #23D5AB, #DE9C21);
+  background-size: 400% 400%;
+  animation: degrade 10s ease-in-out infinite;
+  background-attachment: fixed;
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+
+footer {
+  background: #3586ff;
+  width: 100%;
+  min-height: 100px;
+  padding-top: 50px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+footer .redesFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0px;
+}
+footer .redesFooter li {
+  list-style: none;
+}
+footer .redesFooter a {
+  display: inline-block;
+}
+footer .menuFooter {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-decoration: none;
+  margin: 3px 0;
+  padding-left: 0px;
+}
+footer .menuFooter a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 5px;
+  border-bottom: 1px solid white;
+  height: 20px;
+}
+footer .menuFooter a:hover {
+  opacity: 0.5;
+}
+footer .lni {
+  font-size: 35px;
+  color: white;
+  padding: 0 8px;
+}
+footer .lni:hover {
+  filter: hue-rotate(360deg) drop-shadow(6px 2px 2px black);
+}
+footer p {
+  font-size: 10px;
+  width: 200px;
+  color: white;
+  margin-top: 20px;
 }
 
 /* ................aboutmeeee........................ */
 .carousel-inner {
   margin: auto;
   width: 20%;
-  max-width: 800px;
+  max-width: 700px;
   padding: 2.5em 2em;
   text-align: center;
+
+}
+.carousel-item{
+  margin: auto;
+  width: 20%;
+  max-width: 700px;
+  padding: 2.5em 2em;
+  text-align: center;
+
 }
 
 /* ...............contacto..................... */
-.formulario {
-  background-color: rgb(14, 14, 104);
-  opacity: 0.8;
-  background: radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+.contenedorContacto {
+  background: linear-gradient(-45deg, #EE7752, #E73c7e, #23A6D5, #23D5AB, #DE9C21);
+  background-size: 400% 400%;
+  animation: degrade 10s ease-in-out infinite;
+  background-attachment: fixed;
+  width: auto;
+  height: 100vh;
+  color: black;
   display: flex;
-  min-height: 100vh;
-}
-.formulario .form {
-  background-color: rgb(14, 14, 104);
-  margin: auto;
-  width: 90%;
-  max-width: 400px;
-  padding: 4.5em 3em;
-  border-radius: 10px;
-  box-shadow: 0 5px 5px rgb(0, 0, 0) 137, 185, 4, 0.3;
-  text-align: center;
-}
-.formulario .form .form_title {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
-  color: rgb(255, 255, 255);
-}
-
-.form_paragraph {
-  font-weight: 300;
-  color: rgb(255, 255, 255);
-}
-.form_paragraph .form_link {
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-}
-.form_paragraph .form_link .form_container {
-  margin-top: 3em;
-  display: grid;
-  gap: 2.5em;
-}
-
-.form_group {
-  position: relative;
-  color: rgb(255, 255, 255);
-}
-.form_group .form_input {
-  width: 100%;
-  background: none;
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  padding: 0.6em 0.3em;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid rgb(228, 237, 100);
-}
-.form_group .form_input .form_input:focus + .form_label {
-  transform: translateY(-12px) scale(0.7);
-}
-
-.form_label {
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 5px;
-  transform: translatey(10px);
-}
-.form_label .form_line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: rgb(255, 255, 255);
-  transform: scale(0);
-  transform: left bottom;
-  transition: transform 0.4s;
-}
-
-.cajitafacebook {
-  background-color: blue;
-  color: rgb(121, 121, 121);
-  border-radius: 10px;
-  border: 2px solid rgb(0, 0, 0);
-}
-
-.cajitainstagram {
-  background-color: rgb(153, 0, 102);
-  color: rgb(121, 121, 121);
-  border-radius: 10px;
-  border: 2px solid rgb(0, 0, 0);
-}
-
-.cajitamail {
-  background-color: rgb(255, 0, 0);
-  color: rgb(121, 121, 121);
-  border-radius: 10px;
-  border: 2px solid rgb(0, 0, 0);
-}
-
-.cajitatwitter {
-  background-color: rgb(20, 232, 240);
-  color: rgb(121, 121, 121);
-  border-radius: 10px;
-  border: 2px solid rgb(0, 0, 0);
-}
-
-.logo1, .logo2 {
-  background-image: url(../img/rojo.jpg);
-  border-radius: 80%;
-  width: 100px;
-  height: 100px;
-  background-color: rgb(255, 255, 255);
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 200%;
-  color: #e5e5f7;
 }
-
-.logo, .logo2 {
-  width: 100px;
-  height: 150px;
+.contenedorContacto .encabezadoContacto {
+  height: 200px;
+  width: 500px;
+}
+.contenedorContacto .Formulario {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 500px;
+  height: 550px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border: white solid 1px;
+}
+.contenedorContacto .Formulario .casilla {
+  border-radius: 7px;
+  background-color: #1C1E22;
+  padding: 10px;
+  width: 350px;
+  color: white;
+}
+.contenedorContacto .Formulario textarea {
+  max-height: 150px;
+  background-color: #1C1E22;
+  width: 350px;
+}
+.contenedorContacto .Formulario label {
+  padding: 5px;
+}
+.contenedorContacto .Formulario .btnForm {
+  width: 200px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  background-color: #5C62EC;
 }
 
 #info {
@@ -188,7 +186,7 @@ body .section .night .section .night #intro-text {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  border: 4.5px solid rgb(236, 233, 233);
+  border: 4.5px solid #ece9e9;
   overflow: hidden;
   padding: 0px;
   margin: 0 auto;
@@ -223,7 +221,7 @@ body .section .night .section .night #intro-text {
     box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
   }
   50% {
-    box-shadow: 0 0 40px rgb(242, 239, 136);
+    box-shadow: 0 0 40px #f2ef88;
   }
   100% {
     box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
@@ -235,7 +233,7 @@ body .section .night .section .night #intro-text {
     box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
   }
   50% {
-    box-shadow: 0 0 40px rgb(242, 239, 136);
+    box-shadow: 0 0 40px #f2ef88;
   }
   100% {
     box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
@@ -301,9 +299,9 @@ body .section .night .section .night #intro-text {
 }
 .night .stars .stars div:nth-child(n) {
   position: absolute;
-  background: radial-gradient(rgb(90, 25, 25), rgba(255, 255, 255, 0));
+  background: radial-gradient(#5a1919, rgba(255, 255, 255, 0));
   border-radius: 50%;
-  box-shadow: 0 0 10px rgb(116, 30, 30);
+  box-shadow: 0 0 10px #741e1e;
   overflow: hidden;
   width: 0.4%;
   height: 0.4%;
@@ -351,7 +349,7 @@ body .section .night .section .night #intro-text {
 }
 
 .linkedin:hover {
-  color: rgba(83, 6, 64, 0.5333333333);
+  color: #53064088;
 }
 
 /* ..................proyectos.............................. */
@@ -373,7 +371,7 @@ body .section .night .section .night #intro-text {
   grid-area: eze;
   display: flex;
   text-transform: capitalize;
-  color: rgb(14, 14, 104);
+  color: #0e0e68;
   background-color: rgba(238, 231, 231, 0.24);
   background-image: url(../img/com.jpj.jpg);
   background-repeat: no-repeat;
@@ -387,7 +385,7 @@ body .section .night .section .night #intro-text {
   display: flex;
   grid-area: eze1;
   background-size: cover;
-  background-color: rgb(24, 190, 74);
+  background-color: #18be4a;
   background-image: url(../img/wew.jpg);
   background-repeat: no-repeat;
   justify-content: center;
@@ -399,7 +397,7 @@ body .section .night .section .night #intro-text {
 .eze2 {
   display: flex;
   grid-area: eze2;
-  background-color: rgb(238, 238, 241);
+  background-color: #eeeef1;
   background-image: url(../img/gris1.jpg);
   background-repeat: no-repeat;
   justify-content: center;
@@ -411,19 +409,19 @@ body .section .night .section .night #intro-text {
 .eze3 {
   display: flex;
   grid-area: eze3;
-  background-color: rgb(39, 39, 185);
+  background-color: #2727b9;
   background-image: url(../img/gris1.jpg);
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: rgb(43, 0, 122);
+  color: #2b007a;
 }
 
 .eze4 {
   display: flex;
   grid-area: eze4;
-  background-color: rgb(255, 17, 0);
+  background-color: #ff1100;
   background-image: url(../img/gris.jpg);
   background-repeat: no-repeat;
   justify-content: center;
@@ -443,3 +441,9 @@ body .section .night .section .night #intro-text {
 }
 
 /*# sourceMappingURL=estilo.css.map */
+
+.tecno{
+ 
+  text-align: center; 
+  background-position: 0%;
+}
